@@ -10,7 +10,7 @@ from langchain_core.output_parsers import StrOutputParser
 from pypdf import PdfReader
 
 # ---- CONFIG ----
-GROQ_API_KEY = GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "your-groq-api-key-here")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "your-groq-api-key-here")
 
 # ---- PAGE SETUP ----
 st.set_page_config(
@@ -555,7 +555,7 @@ if "docs_processed" not in st.session_state:
 
 # ---- SIDEBAR ----
 with st.sidebar:
-    st.markdown('<p class="glow-label">⚡ DocMind AI</p>', unsafe_allow_html=True)
+    st.markdown('<p class="glow-label"> DocMind AI</p>', unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("###  How it works")
     st.markdown("1.  Upload your PDFs")
@@ -590,21 +590,21 @@ if not st.session_state.docs_processed:
     with col_a:
         st.markdown("""
         <div class="feature-card">
-            <span class="feature-icon">📚</span>
+            <span class="feature-icon"></span>
             <div style="color:#a78bfa;font-weight:700;font-size:1.1rem;margin-bottom:0.4rem">Multiple PDFs</div>
             <div style="color:#475569;font-size:0.85rem">Upload several documents at once</div>
         </div>""", unsafe_allow_html=True)
     with col_b:
         st.markdown("""
         <div class="feature-card">
-            <span class="feature-icon">💬</span>
+            <span class="feature-icon"></span>
             <div style="color:#60a5fa;font-weight:700;font-size:1.1rem;margin-bottom:0.4rem">Chat History</div>
             <div style="color:#475569;font-size:0.85rem">Remembers entire conversation</div>
         </div>""", unsafe_allow_html=True)
     with col_c:
         st.markdown("""
         <div class="feature-card">
-            <span class="feature-icon">⚡</span>
+            <span class="feature-icon"></span>
             <div style="color:#34d399;font-weight:700;font-size:1.1rem;margin-bottom:0.4rem">Instant Answers</div>
             <div style="color:#475569;font-size:0.85rem">Powered by Llama 3.3 70B</div>
         </div>""", unsafe_allow_html=True)
